@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ButtonSub from "../Ui/ButtonSub";
 import FnLogo from "../Ui/FnLogo";
 import Input from "../Ui/Input";
@@ -6,8 +7,10 @@ export default function LoginCard() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center px-4">
-        <div className="my-4">
-          <FnLogo />
+        <div className="my-6">
+          <div className="flex justify-center">
+            <FnLogo />
+          </div>
           <div className=" text-center mt-4 text-white">
             <h3 className="font-bold">Welcome Back</h3>
             <span className="text-white/60">
@@ -45,7 +48,11 @@ export default function LoginCard() {
                 </a>
               </div>
               <div className="text-center">
-                <ButtonSub className="bg-primary text-white rounded-xl px-4 w-full hover:bg-hoverprim hover:cursor-pointer" type="button">Sign in </ButtonSub>
+                <Link to="/">
+                <ButtonSub className="bg-primary text-white rounded-xl py-3 px-4 w-full hover:bg-hoverprim" type="button">
+                  Sign in
+                </ButtonSub>
+                </Link>
               </div>
 
             <div className="my-6 flex justify-between items-center gap-0.5 text-gray-500">
@@ -57,14 +64,19 @@ export default function LoginCard() {
 
 
               <div className="grid grid-cols-3 gap-2 text-gray-700">
-                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-1 text-center">Admin</ButtonSub>
-                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-1 text-center">Student</ButtonSub>
-                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-1 text-center">Opration</ButtonSub>
+                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-2 text-center hover:bg-gray-200">Admin</ButtonSub>
+                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-2 text-center hover:bg-gray-200">Student</ButtonSub>
+                <ButtonSub className="border-gray-400 border-2 rounded-2xl bg-transparent px-5 py-2 text-center hover:bg-gray-200 ">Opration</ButtonSub>
               </div>
             </form>
 
 
           </div>
+          
+          <div className="flex justify-center my-2">
+          <span className="text-white">  Don't have an account?<Link to="/register" className="text-accent"> Sign up </Link></span>
+          </div>
+
         </div>
       </div>
     </>

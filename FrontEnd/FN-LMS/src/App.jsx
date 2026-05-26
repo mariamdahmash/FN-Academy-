@@ -1,10 +1,11 @@
 import "./App.css";
-import LoginCard from "./Components/login/LoginCard";
+import CustomRouter from "./Router/Router";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <LoginCard/>
+      <RouterProvider router={CustomRouter}/>
     </>
   );
 }

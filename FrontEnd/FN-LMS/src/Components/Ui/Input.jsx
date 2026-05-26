@@ -7,7 +7,7 @@ function Input({type,placeholder,className="",...props}) {
         type={type}
         data-slot="input"
         placeholder={placeholder}
-        className={` border-input  w-full min-w-0 rounded-md border px-3 py-1   ${className}`}
+        className={` border-input  min-w-0 rounded-md border px-3 py-1   ${className}`}
         {...props}
         />
     </>
