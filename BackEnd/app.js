@@ -13,6 +13,7 @@ app.use(express.json())
 // Routes
 
 app.use("/api",authRoute)
+app.use("/api",authRoute)
 
 //simple logger
 if(process.env.NODE_ENV === "dev"){
