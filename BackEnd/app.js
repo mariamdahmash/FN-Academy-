@@ -5,8 +5,14 @@ require("dotenv").config()
 const express = require("express")
 const app = express()
 
+const authRoute = require("./routes/authRoute")
+
 // json middelware
 app.use(express.json())
+
+// Routes
+
+app.use("/api",authRoute)
 
 //simple logger
 if(process.env.NODE_ENV === "dev"){
